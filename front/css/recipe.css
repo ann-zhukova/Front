@@ -1,0 +1,34 @@
+main {
+    display: block;
+}
+
+.recipe-head{
+    margin: 16px;
+    padding: 32px;
+    display: flex;
+    flex-direction: row;
+    flex: 1 1 auto;
+    height: auto;
+    width: 100%;
+}
+
+.recipe-ingredients{
+    padding: 16px;
+    display: block;
+}
+
+.recipe-img{
+    width: auto;
+    height: 383px;
+    flex: 0 0 383px;
+}
+
+.recipe-info{
+    padding: 16px;
+    display: block;
+}
+.recipe-name{
+    padding: 16px;
+    display: flex;
+    flex-direction: row;
+}

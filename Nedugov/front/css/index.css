@@ -1,0 +1,189 @@
+h1{
+    color:#fff;
+}
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Минимальная высота 100% от высоты окна */
+    margin: 0; /* Убираем отступы */
+    font-family: 'Helvetica';
+    color: #fff;
+}
+main{
+    display: flex;
+    flex: 1 1 100%;
+}
+footer {
+    margin-top: auto; /* Отодвигает footer вниз */
+    padding: 16px; /* Отступы внутри footer */
+    text-align: left; /* Выравнивание текста по центру */
+}
+aside {
+    width: calc(25% - 32px);
+    height: 80%;
+    top: 0; /* Располагает в верхней части страницы */
+    left: 0; /* Располагает в левой части страницы */
+}
+.logo {
+    width: auto;
+    height: 80px;
+}
+
+.header {
+    background-color: #24232E;
+    color: #fff;
+    padding: 16px;
+  /*  display: grid;
+    grid-template-columns: 25% 10% 10%;*/
+    display: flex;               /* Use flexbox for layout */
+    justify-content: space-between; /* Space between items */
+    align-items: center;        /* Center items vertically */
+}
+.header-block{
+    margin-right: 16px;
+    font-size: larger;
+    font-family: 'Helvetica', Times, serif;
+}
+
+.header-block:hover{
+    font-weight: bold;
+}
+
+body {
+    background-color: #474851;
+}
+
+.sort{
+    background-color: #24232E;
+    color:#fff;
+    margin: 16px 16px 16px 16px;
+    padding: 16px;
+}
+.sort > *{
+    display: flex;
+    flex: 0 1; 
+}
+.filtration{
+    background-color: #24232E;
+    color:#fff;
+    margin: 16px 16px 16px 16px;
+
+}
+
+.filtration > * {
+    display: block; /* Элементы внутри будут в столбик */
+    color: #fff;
+}
+.filtrationHeader{
+    background-color: #60687F;
+    color: #D1C6E9;
+}
+.selectInput{
+    background-color: #60687F;
+
+}
+.selectInputSort{
+    display: inline;
+    background-color: #60687F;
+    color: #fff;
+}
+.card {
+    margin: 16px;
+    display: flex;
+    flex-direction: row;
+    flex: 1 1 auto;
+    height: 200px;
+  }
+  
+  .card-tags {
+    
+  }
+  
+  .card-body {
+    padding: 16px;
+    display: block;
+  }
+  
+  .card-img {
+    width: 139px;
+    height: auto;
+    flex: 0 0 139px;
+  }
+  
+  section {
+    display: flex;
+  flex-direction: column;
+  flex-wrap: wrap; 
+  }
+
+a:link, a:visited {
+    color: #fff; 
+    text-decoration: none; 
+}
+a:hover {
+    font-weight: bold;
+}
+.cabinet-link{
+    margin-left: auto;
+}
+
+button{
+    color:#F5F5F5;
+    background-color: #24232E; 
+    border-radius: 12px;
+    padding: 12px;
+    margin: 8px;
+    border: none;
+    cursor: pointer;
+    width: 187px;
+    height: 38px;
+}
+button:hover {
+    background-color: #17161d;
+}
+  
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 40px;
+    height: 24px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: .4s;
+    border-radius: 34px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 18px;
+    width: 18px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: .4s;
+    border-radius: 50%;
+}
+
+input:checked + .slider {
+    background-color: #60687F;
+}
+
+input:checked + .slider:before {
+    transform: translateX(14px);
+}

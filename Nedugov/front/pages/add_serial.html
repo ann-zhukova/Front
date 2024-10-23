@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="../css/add_serial.css">
+    <script src="../scripts/add_steps.js"></script>
+</head>
+<body>
+    <header class="header">
+        <img class="logo" src="../img/logo.png">
+        <a href="../index.html" class="header-block">Сериалы</a>
+        <a href="news.html" class="header-block">Новости</a>
+        <a href="cabinet.html" class="cabinet-link">Маша Кинокритик</a>
+    </header>
+    <main>
+        <section>
+            <h1>Добавьте сериал, про который мы еще не знаем</h1>
+            <form id="recipeForm">
+                <label for="recipeName">Название:</label>
+                <input type="text" id="recipeName" name="recipeName" required>
+            
+                <label for="ingredients">Описание:</label>
+                <textarea id="ingredients" name="ingredients" rows="4" required></textarea>
+            
+                <div id="stepsContainer">
+                    <input id="instructions" name="instructions" rows="4" required>
+                </div>
+                <button type="button" onclick="addStep()">Добавить жанр</button>
+                <button type="submit">Добавить рецепт</button>
+            </form>
+        </section>
+    </main>
+    <footer class="footer">
+        <hr>
+        <a href="about_us.html">О нас</a>
+    </footer> 
+</body>
+</html>

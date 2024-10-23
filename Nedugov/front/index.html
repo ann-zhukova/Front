@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+    <header class="header">
+        <img class="logo" src="img/logo.png">
+        <a href="index.html" class="header-block">Сериалы</a>
+        <a href="pages/news.html" class="header-block">Новости</a>
+        <a href="pages/cabinet.html" class="cabinet-link">Маша Кинокритик</a>
+    </header>
+    <main>
+        <aside>
+            <div class="filtration">
+                <div class="filtrationHeader">Фильтры</div>
+                Год выхода 
+                <div class="slider-container">
+                    <input type="range" min="0" max="100" value="25" id="minRange">
+                    <input type="range" min="0" max="100" value="75" id="maxRange">
+                </div>
+                Жанры  
+                <label class="switch">
+                    <input type="checkbox">
+                    <span class="slider"></span>
+                </label>
+                <select class="selectInput">
+                    <option>Выберете тип</option>
+                    <option>Комедия</option>
+                    <option>Триллер</option>
+                    <option>Драма</option>
+                    <option>Романтика</option>
+                </select>
+                Возрастное ограничение
+                <select class="selectInput">
+                    <option>Выберете тип</option>
+                    <option>6+</option>
+                    <option>12+</option>
+                    <option>16+</option>
+                    <option>18+</option>
+                </select>
+                Статус 
+                <select class="selectInput">
+                    <option>Выберете тип</option>
+                    <option>Вышел</option>
+                    <option>Выходит</option>
+                    <option>Ожидает выхода</option>
+                </select>
+            </div>
+        </aside>
+        <section>
+            <h1>Список сериалов</h1>
+            <div class="sort">
+                сортировать по
+                <select class="selectInputSort">
+                    <option>Дата выхода</option>
+                    <option>Рейтинг</option>
+                </select>
+            </div>
+            <div class="card">
+                <img src="img/breakingBad.jpg" class="card-img">
+                <div class="card-body>">
+                    <div class="card-header">
+                        <a href="pages/serial_page.html">Во все тяжкие</a> 
+                    </div>
+                    <div class="card-tags">
+                        год выхода 2008
+                        жанры: криминал, драма, триллер
+                        
+                    </div>
+                    <div class="card-description">
+                        Школьный учитель химии узнает, что у него рак и решает идти во все тяжкие...
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div class="card">
+                <img src="img/friends.jpg" class="card-img">
+                <div class="card-body>">
+                    <div class="card-header">
+                        Друзья
+                    </div>
+                    <div class="card-tags">
+                        Год выхода 2000
+                        жанры: комедия, повседневность
+                    </div>
+                    <div class="card-description">
+                        Рейчел сбегает со своей свадьбы и переезжает к школьной подруге Монике, чтобы повзрослеть и найти друзей в Нью-Йорке
+                    </div>
+                </div>
+            </div>
+            <hr>
+        </section>
+    </main>
+    <footer class="footer">
+        <hr>
+        <a href="pages/about_us.html">О нас</a>
+    </footer>
+</body>
+</html>

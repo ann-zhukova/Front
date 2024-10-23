@@ -1,0 +1,126 @@
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Минимальная высота 100% от высоты окна */
+    margin: 0; /* Убираем отступы */
+    font-family: Arial, Helvetica, sans-serif;
+    color: #41574D;
+}
+main{
+    display: flex;
+    flex: 1 1 100%;
+}
+
+footer {
+    margin-top: auto; /* Отодвигает footer вниз */
+    padding: 16px; /* Отступы внутри footer */
+    background-color: #DBDEDD;
+    text-align: left; /* Выравнивание текста по центру */
+}
+aside {
+    width: calc(40% - 32px);
+    height: 80%;
+    top: 0; /* Располагает в верхней части страницы */
+    left: 0; /* Располагает в левой части страницы */
+}
+.logo {
+    width: auto;
+    height: 80px;
+}
+
+.header {
+    background-color: #BFD6CC;
+    padding: 16px;
+    display: flex;               
+    justify-content: space-between; 
+    align-items: center;       
+}
+.header-block{
+    margin-right: 16px;
+    font-size: larger;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.header-block:hover{
+    font-weight: bold;
+}
+a:link, a:visited {
+    color: #41574D; 
+    text-decoration: none; 
+}
+a:hover {
+    font-weight: bold;
+}
+.cabinet-link{
+    margin-left: auto;
+}
+body {
+    background-color: #F7FBF9;
+}
+
+.sort{
+    background-color: #DBDEDD;
+    margin: 16px 16px 16px 16px;
+}
+.sort > *{
+    display: flex;
+    flex: 0 1; 
+}
+.filtration{
+    background-color: #DBDEDD;
+    margin: 16px 16px 16px 16px;
+
+}
+
+.filtration > * {
+    display: block; /* Элементы внутри будут в столбик */
+}
+.selectInput{
+    background-color: #6D9785;
+}
+.card {
+
+    background-color: #DBDEDD;
+    margin: 16px;
+    display: flex;
+    flex-direction: row;
+    flex: 1 1 auto;
+    height: 200px;
+    width: calc(50% - 32px);
+  }
+  
+  .card-tags {
+    background-color: #6D9785;
+  }
+  
+  .card-body {
+    padding: 16px;
+    display: block;
+  }
+  
+  .card-img {
+    width: 173px;
+    height: auto;
+    flex: 0 0 173px;
+  }
+  
+  section {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap; 
+  }
+
+button{
+    color:#fff;
+    background-color: #6D9785; 
+    border-radius: 12px;
+    padding: 12px;
+    margin: 8px;
+    border: none;
+    cursor: pointer;
+    width: 187px;
+    height: 38px;
+}
+button:hover {
+    background-color: #3c544a;
+}

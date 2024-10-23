@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="../css/favorite.css">
+    <link rel="stylesheet" href="../css/form_recipe.css">
+    <script src="../scripts/add_steps.js"></script>
+</head>
+<body>
+    <header class="header">
+        <img class="logo" src="../img/logo.png">
+        <a href="../index.html" class="header-block">Рецепты</a>
+        <a href="favorite.html" class="header-block">Избранное</a>
+        <a href="my_recipe.html" class="header-block">Мои рецепты</a>
+        <a href="account.html" class="cabinet-link">Анна</a>
+    </header>
+    <main>
+        <section>
+            <h1>Добавьте свой рецепт</h1>
+            <form id="recipeForm">
+                <label for="recipeName">Название рецепта:</label>
+                <input type="text" id="recipeName" name="recipeName" required>
+            
+                <label for="ingredients">Ингредиенты:</label>
+                <textarea id="ingredients" name="ingredients" rows="4" required></textarea>
+            
+                <div id="stepsContainer">
+                    <textarea id="instructions" name="instructions" rows="4" required></textarea>
+                </div>
+                <button type="button" onclick="addStep()">Добавить шаг</button>
+                <button type="submit">Добавить рецепт</button>
+            </form>
+        </section>
+    
+    </main>
+    <footer class="footer">
+        <a href="about_us.html">О нас</a>
+    </footer>
+</body>
+</html>

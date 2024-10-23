@@ -1,0 +1,29 @@
+.serial {
+    margin: 16px;
+    display: flex;
+    flex-direction: row;
+    flex: 1 1 auto;
+    height: 200px;
+  }
+ 
+.serial-img{
+    width: 223px;
+    height: auto;
+    flex: 0 0 139px;
+}
+.serial-header{
+    display: flex;
+    flex-direction: row;
+}
+.serial-info{
+    padding: 16px;
+    display: block;
+}
+.serial-body {
+    padding: 16px;
+    display: block;
+  }
+
+.card-description{
+    padding: 16px;
+}
