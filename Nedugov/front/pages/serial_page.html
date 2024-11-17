@@ -2,9 +2,9 @@
 <html lang="ru">
 <head>
     <meta charset="utf-8">
-    <title></title>
-    <link rel="stylesheet" href="../css/index.css">
+    <title>Во все тяжкие</title>
     <link rel="stylesheet" href="../css/serial_page.css">
+    <link rel="stylesheet" href="../css/index.css">
 </head>
 <body>
     <header class="header">
@@ -14,13 +14,17 @@
         <a href="cabinet.html" class="cabinet-link">Маша Кинокритик</a>
     </header>
     <main>
+        <div id="myModal" class="modal-img">
+            <span class="close-img">&times;</span>
+            <img class="modal-content-img" id="img01" alt="пользователь">
+        </div>
         <section>
             <div class="serial">
-                <img src="../img/breakingBad.jpg">
+                <img id="myImage" class="serial-img" src="../img/breakingBad.jpg" alt="Во все тяжкие">
                 <div class="serial-body">
                     <div class="serial-header">
                         9.8 
-                        <button> </button>
+                        <button class="button-favorite"> </button>
                         Добавить в избранное
                     </div>
                     <h1> Во все тяжкие </h1>
@@ -40,20 +44,30 @@
                 </div>
             </div>
             <div class="comment-section">
-                <textarea>
-                    Любимый сериал
-                </textarea>
-                <button>Опубликовать</button>
-                <div>
-                    Интересный сериал, закрченный сюжет
+                <button id="publishButton">Написать комментарий</button>
+                <div class="comment">
+                    Интересный сериал, закрученный сюжет
                 </div>
-                
+                <div class="comment">
+                    Проект перевернул телевидение, культовый сериал, рекомендую посмотерть каждому
+                </div>
             </div>
         </section>
+        <!-- Модальное окно -->
+        <div id="modal" class="modal">
+            <div class="modal-content">
+                <span class="close-button">&times;</span>
+                <h2>Ваш комментарий</h2>
+                <textarea rows="5" id="modalComment" placeholder="Напишите ваш комментарий здесь..."></textarea>
+                <button id="submitComment">Отправить</button>
+            </div>
+        </div>
     </main>
     <footer class="footer">
         <hr>
         <a href="about_us.html">О нас</a>
     </footer>
+    <script src="../scripts/show_poster.js"></script>
+    <script src="../scripts/comment_modal.js"></script>
 </body>
 </html>

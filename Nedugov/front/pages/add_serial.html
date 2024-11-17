@@ -2,7 +2,7 @@
 <html lang="ru">
 <head>
     <meta charset="utf-8">
-    <title></title>
+    <title>Добавить сериал</title>
     <link rel="stylesheet" href="../css/index.css">
     <link rel="stylesheet" href="../css/add_serial.css">
     <script src="../scripts/add_steps.js"></script>
@@ -17,18 +17,30 @@
     <main>
         <section>
             <h1>Добавьте сериал, про который мы еще не знаем</h1>
-            <form id="recipeForm">
+            <form id="serialForm">
                 <label for="recipeName">Название:</label>
-                <input type="text" id="recipeName" name="recipeName" required>
+                <input type="text" id="serialName" name="serialName" required>
             
-                <label for="ingredients">Описание:</label>
-                <textarea id="ingredients" name="ingredients" rows="4" required></textarea>
-            
-                <div id="stepsContainer">
-                    <input id="instructions" name="instructions" rows="4" required>
+                <label for="decsription">Описание:</label>
+                <textarea id="decsription" name="decsription" rows="4" required></textarea>
+                <div class="dropdown">
+                    <button>Выберете жанры</button>
+                    <div class="dropdown-content">
+                      <label><input type="checkbox" value="Комедия"> Комедия</label>
+                      <label><input type="checkbox" value="Триллер" > Триллер</label>
+                      <label><input type="checkbox" value="Драма"> Драма</label>
+                      <label><input type="checkbox" value="Романика"> Романика</label>
+                    </div>
                 </div>
-                <button type="button" onclick="addStep()">Добавить жанр</button>
-                <button type="submit">Добавить рецепт</button>
+                <div>
+                    <label for="raiting">Рейтинг сериала на кинопоиске</label>
+                    <input type="number" id="raiting" name="raiting" required>
+                </div>
+                <div>
+                    <label for="raiting">Год выхода</label>
+                    <input type="number" id="year" name="year" required>
+                </div>
+                <button type="submit">Сохранить</button>
             </form>
         </section>
     </main>
@@ -36,5 +48,7 @@
         <hr>
         <a href="about_us.html">О нас</a>
     </footer> 
+    <script src="../scripts/serial_validation.js"></script>
+    <script src="../scripts/dropdown.js"></script>
 </body>
 </html>

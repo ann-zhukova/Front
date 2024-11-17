@@ -5,20 +5,20 @@ body {
     margin: 0; /* Убираем отступы */
     font-family: Arial, Helvetica, sans-serif;
     color: #41574D;
+    --color-headline: #99a3ba;
 }
 main{
     display: flex;
-    flex: 1 1 100%;
 }
 
 footer {
     margin-top: auto; /* Отодвигает footer вниз */
     padding: 16px; /* Отступы внутри footer */
     background-color: #DBDEDD;
-    text-align: left; /* Выравнивание текста по центру */
+    text-align: left; /* Выравнивание текста*/
 }
 aside {
-    width: calc(40% - 32px);
+    width: calc(80% - 32px);
     height: 80%;
     top: 0; /* Располагает в верхней части страницы */
     left: 0; /* Располагает в левой части страницы */
@@ -61,13 +61,20 @@ body {
 .sort{
     background-color: #DBDEDD;
     margin: 16px 16px 16px 16px;
+    padding: 4px;
+    border-radius:  12px;
+    display: flex;
+    flex-wrap: wrap;
 }
 .sort > *{
     display: flex;
+    padding: 12px;
     flex: 0 1; 
 }
 .filtration{
     background-color: #DBDEDD;
+    border-radius:  12px;
+    padding: 12px;
     margin: 16px 16px 16px 16px;
 
 }
@@ -77,6 +84,10 @@ body {
 }
 .selectInput{
     background-color: #6D9785;
+    border-color: #6D9785;
+    color:#F7FBF9;
+    padding: 4px;
+    border-radius: 12px;
 }
 .card {
 
@@ -86,16 +97,21 @@ body {
     flex-direction: row;
     flex: 1 1 auto;
     height: 200px;
-    width: calc(50% - 32px);
+    width: calc(40% - 32px);
+    border-radius: 12px;
   }
   
   .card-tags {
     background-color: #6D9785;
+    color:#F7FBF9;
+    padding: 12px;
   }
   
   .card-body {
     padding: 16px;
+    padding: 12px;
     display: block;
+    width: 100%;
   }
   
   .card-img {
@@ -103,11 +119,20 @@ body {
     height: auto;
     flex: 0 0 173px;
   }
+
+  .card-header{
+    padding: 12px;
+  }
+
+  .card-description{
+    padding: 12px;
+  }
   
   section {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap; 
+  padding: 24px;
   }
 
 button{
@@ -124,3 +149,91 @@ button{
 button:hover {
     background-color: #3c544a;
 }
+
+  .input-ranges[type='range'] {
+    width: 100%;
+    height: 30px;
+    overflow: hidden;
+    outline: none;
+  }
+  
+  .input-ranges[type='range'],
+  .input-ranges[type='range']::-webkit-slider-runnable-track,
+  .input-ranges[type='range']::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    background: none;
+  }
+  
+  .input-ranges[type='range']::-webkit-slider-runnable-track {
+    width: calc(100%-1px);
+    height: 1px;
+    background: var(--color-headline);
+  }
+  
+  .input-ranges[type='range']:nth-child(2)::-webkit-slider-runnable-track {
+    background: none;
+  }
+  
+  .input-ranges[type='range']::-webkit-slider-thumb {
+    position: relative;
+    height: 15px;
+    width: 15px;
+    margin-top: -7px;
+    background: #fff;
+    border: 1px solid var(--color-headline);
+    border-radius: 25px;
+    cursor: pointer;
+    z-index: 1;
+    transition: .5s;
+    -webkit-transition: .5s;
+    -moz-transition: .5s;
+    -ms-transition: .5s;
+    -o-transition: .5s;
+  }
+  
+  .input-ranges[type='range']::-webkit-slider-thumb:hover {
+    background: #eaefff;
+    border: 1px solid var(--color-primary);
+    outline: .5px solid var(--color-primary);
+  }
+  
+  .input-ranges[type='range']::-webkit-slider-thumb:active {
+    cursor: grabbing;
+  }
+  
+  .input-ranges[type='range']:nth-child(1)::-webkit-slider-thumb {
+    z-index: 2;
+  }
+  
+  .rangeslider {
+    font-family: sans-serif;
+    font-size: 14px;
+    position: relative;
+    height: 20px;
+    width: calc(100%);
+    display: inline-block;
+    margin-top: -5px;
+  }
+  
+  .rangeslider input {
+    position: absolute;
+  }
+  
+  .rangeslider span {
+    position: absolute;
+    margin-top: 20px;
+    left: 0;
+  }
+  
+  .rangeslider .right {
+    position: relative;
+    float: right;
+    margin-right: -5px;
+  }
+
+.current-range {
+    display: block;
+    color: var(--color-text);
+    margin-top: 8px;
+    font-size: 14px;
+  }

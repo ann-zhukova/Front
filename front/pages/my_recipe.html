@@ -2,9 +2,10 @@
 <html lang="ru">
 <head>
     <meta charset="utf-8">
-    <title></title>
+    <title>Мои рецепты</title>
     <link rel="stylesheet" href="../css/index.css">
     <link rel="stylesheet" href="../css/favorite.css">
+    <link rel="stylesheet" href="../css/my_recipe.css">
 </head>
 <body>
     <header class="header">
@@ -17,83 +18,35 @@
     <main>
         <section>
             <h1>Мои рецепты</h1>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Рецепт</th>
+                        <th>Время приготовления</th>
+                        <th>Дата добавления</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Паста с томатным соусом</td>
+                        <td>30 минут</td>
+                        <td>14 ноября 2024</td>
+                    </tr>
+                    <tr>
+                        <td>Курица с овощами</td>
+                        <td>45 минут</td>
+                        <td>13 ноября 2024</td>
+                    </tr>
+                    <tr>
+                        <td>Шоколадный торт</td>
+                        <td>1 час</td>
+                        <td>12 ноября 2024</td>
+                    </tr>
+                </tbody>
+            </table>
             <div>
                 <a href="form_recipe.html"><button >Добавить новый рецепт</button></a>
             </div>
-            <div class="scrollContainer" id="scrollContainer">
-            <div class="scrollable-item">
-                <div class="card">
-                    <img src="../img/pi.jpg" class="card-img">
-                    <div class="card-body>">
-                        <div class="card-header">
-                            Цветаевский пирог
-                        </div>
-                        <div class="card-tags">
-                            десерты
-                            пироги
-                        </div>
-                        <div class="card-description">
-                            ягоды, сметана, сахар, мука, крахмал, яица
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="scrollable-item">
-                <div class="card">
-                    <img src="../img/sup.jpg" class="card-img">
-                    <div class="card-body>">
-                        <div class="card-header">
-                            Грибной крем суп
-                        </div>
-                        <div class="card-tags">
-                            первое, 
-                            крем-суп
-                        </div>
-                        <div class="card-description">
-                            шампиньоны, картофель, сливки, 
-                            лук, масло
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="scrollable-item">
-                <div class="card">
-                    <img src="../img/lasagna.jpg" class="card-img">
-                    <div class="card-body>">
-                        <div class="card-header">
-                            Лазанья
-                        </div>
-                        <div class="card-tags">
-                            второе,
-                            мясное
-                        </div>
-                        <div class="card-description">
-                            макаронные листы, мясо, сыр, молоко, томатная паста, сельдерей
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="scrollable-item">
-                <div class="card">
-                    <img src="../img/chicken.JPG" class="card-img">
-                    <div class="card-body>">
-                        <div class="card-header">
-                            Курица в томатном соусе
-                        </div>
-                        <div class="card-tags">
-                            второе
-                            мясное
-                        </div>
-                        <div class="card-description">
-                            курица, томаты, болгарский перец, томатная паста, чеснок
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-        </div>
-        <button id="scrollLeftButton">Прокрутить влево</button>
-        <button id="scrollRightButton">Прокрутить вправо</button>
         </section>
     </main>
     <footer class="footer">

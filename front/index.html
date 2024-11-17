@@ -2,7 +2,7 @@
 <html lang="ru">
 <head>
     <meta charset="utf-8">
-    <title></title>
+    <title>Рецепты</title>
     <link rel="stylesheet" href="css/index.css">
 </head>
 <body>
@@ -22,12 +22,16 @@
                 </select>
             </div>
             <div class="filtration">
-                Время приготовления 
-                <div class="slider-container">
-                    <input type="range" min="0" max="100" value="25" id="minRange">
-                    <input type="range" min="0" max="100" value="75" id="maxRange">
+                <div class="slider-label">Время приготовления</div>
+                <div data-range="#third" data-value-1="#second" data-value-0="#first" class="slider">
+                    <label id="minValue" class="label-min-value">15</label>
+                    <label id="maxValue" class="label-max-value">60</label>
+                  </div>
+                <div class="rangeslider">
+                    <input class="min input-ranges" name="range_1" type="range" min="1" max="720" value="15">
+                    <input class="max input-ranges" name="range_1" type="range" min="1" max="720" value="60">
                 </div>
-                Тип блюда
+                <div>Тип блюда</div>
                 <select class="selectInput">
                     <option>Выберете тип</option>
                     <option>Первое</option>
@@ -35,7 +39,7 @@
                     <option>Десерты</option>
                     <option>Пироги</option>
                 </select>
-                Ингредиенты
+                <div>Ингредиенты</div> 
                 <select class="selectInput">
                     <option>Выберете ингредиенты</option>
                     <option>Мясо</option>
@@ -107,10 +111,41 @@
                     </div>
                 </div>
             </div>
+            <div class="card">
+                <img src="img/bbq.jpg" class="card-img">
+                <div class="card-body>">
+                    <div class="card-header">
+                        Свинные ребра в соусе BBQ
+                    </div>
+                    <div class="card-tags">
+                        второе
+                        мясное
+                    </div>
+                    <div class="card-description">
+                        свинные ребра, чеснок, томатная паста, горчица
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <img src="img/applePi.jpg" class="card-img">
+                <div class="card-body>">
+                    <div class="card-header">
+                        Яблочный пирог
+                    </div>
+                    <div class="card-tags">
+                        десерты
+                        пироги
+                    </div>
+                    <div class="card-description">
+                        яблоки, масло, сахар, яица, мука
+                    </div>
+                </div>
+            </div>
         </section>
     </main>
     <footer class="footer">
         <a href="pages/about_us.html">О нас</a>
     </footer>
+     <script src="scripts/slider_value.js"></script> 
 </body>
 </html>
