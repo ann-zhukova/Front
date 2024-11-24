@@ -3,12 +3,14 @@
     display: flex;
     flex-direction: row;
     flex: 1 1 auto;
+    align-items: flex-start; /* Прижимает элементы к верхней части контейнера */
   }
  
 .serial-img{
-    width: 223px;
-    height: auto;
-    flex: 1 1 223px;
+    width: 30%;
+    height: auto; /* Высота будет автоматически подстраиваться */
+    flex: 1 1;
+    object-fit: contain; /* Сохраняет пропорции изображения */
 }
 .serial-header{
     display: flex;

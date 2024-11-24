@@ -25,6 +25,31 @@ aside {
     top: 0; /* Располагает в верхней части страницы */
     left: 0; /* Располагает в левой части страницы */
 }
+
+@media (max-width: 768px) {
+  aside {
+      width: calc(100% - 32px);
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  aside {
+      width: calc(75% - 32px);
+  }
+}
+
+@media (min-width: 1025px) {
+  aside {
+      width: calc(50% - 32px);
+  }
+}
+
+@media (min-width: 1800px) {
+  aside {
+      width: calc(20% - 32px);
+  }
+}
+
 .logo {
     width: auto;
     height: 80px;
@@ -133,8 +158,9 @@ body {
   
   section {
     display: flex;
-  flex-direction: column;
-  flex-wrap: wrap; 
+    flex-direction: column;
+    flex-wrap: wrap; 
+    width: 100%;
   }
 
 a:link, a:visited {
