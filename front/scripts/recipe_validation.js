@@ -17,9 +17,24 @@ document.getElementById('recipeForm').addEventListener('submit', function(event)
     // Валидация ингредиентов
     const ingredients = document.getElementById('ingredients').value.trim();
     const ingredientsArray = ingredients.split(';').map(item => item.trim());
+    const ingredientsError = document.getElementById('ingredientsError');
+
+    // Проверка на пустое значение
     if (ingredients === '' || ingredientsArray.length === 0 || ingredientsArray.some(item => item === '')) {
-        document.getElementById('ingredientsError').textContent = 'Пожалуйста, введите хотя бы одно слово или ингредиенты через точку с запятой.';
+        ingredientsError.textContent = 'Пожалуйста, введите хотя бы одно слово или ингредиенты через точку с запятой.';
         isValid = false;
+    } else {
+        // Регулярное выражение для проверки формата "ингредиент - количество"
+        const ingredientPattern = /^[^\-;]+ - [^\-;]+$/; // Количество может быть любым текстом
+
+        // Проверка каждого ингредиента на соответствие формату
+        for (const item of ingredientsArray) {
+            if (!ingredientPattern.test(item)) {
+                ingredientsError.textContent = 'Ингредиенты должны быть в формате: ингредиент - количество; ингредиент - количество;';
+                isValid = false;
+                break;
+            }
+        }
     }
 
     // Валидация времени приготовления
@@ -28,7 +43,24 @@ document.getElementById('recipeForm').addEventListener('submit', function(event)
         document.getElementById('timeError').textContent = 'Время приготовления должно быть положительным числом.';
         isValid = false;
     }
+    // валидация типа блюда
+    const dishType = document.getElementById("dishType").value;
+    const dishTypeError = document.getElementById("dishTypeError");
 
+    // Проверка на пустое значение
+    if (!dishType.trim()) {
+        dishTypeError.textContent = "Пожалуйста, введите хотя бы один тип блюда.";
+        event.preventDefault(); // предотвращает отправку формы
+    } else {
+        // Проверка на корректный формат (разделение запятыми)
+        const types = dishType.split(',').map(type => type.trim());
+        if (types.length === 0 || types.some(type => type === "")) {
+            dishTypeError.textContent = "Пожалуйста, убедитесь, что типы блюда разделены запятыми и не пустые.";
+            isValid = false;
+        } else {
+            dishTypeError.textContent = ""; // очищает сообщение об ошибке
+        }
+    }
     // Валидация шагов приготовления
     const textareas = document.getElementsByClassName('step-textarea');
     let instructions = '';
@@ -40,7 +72,7 @@ document.getElementById('recipeForm').addEventListener('submit', function(event)
             isValid = false;
             break; // Прерываем цикл, если хотя бы один шаг пустой
         }
-        instructions += stepValue + '\n'; // Считываем значения и добавляем перенос строки
+        instructions += stepValue + '\n'; 
     }
 
     // Если нет шагов, выводим ошибку
@@ -49,25 +81,25 @@ document.getElementById('recipeForm').addEventListener('submit', function(event)
         isValid = false;
     }
 
-    // Если форма не валидна, предотвратить отправку
-    console.log(recipeName, ingredients, time, instructions);
-    console.log(isValid);
     if (!isValid) {
-        event.preventDefault(); // Предотвратить отправку формы
+        event.preventDefault(); 
         alert('Данные не валидны');
     } else {
-        showModal(recipeName, ingredients, time, instructions);
-        event.preventDefault(); // Предотвратить отправку формы, если показываем модальное окно
+        showModal(recipeName, ingredients, time, instructions, dishType);
+        event.preventDefault(); 
     }
 
-    function showModal(recipeName, ingredients, time, instructions) {
+    function showModal(recipeName, ingredients, time, instructions, dishType) {
         const modal = document.getElementById("myModal");
         const modalContent = document.getElementById("modalContent");
         modalContent.innerHTML = `
+        <p>
             <strong>Название рецепта:</strong> ${recipeName}<br>
             <strong>Ингредиенты:</strong> ${ingredients}<br>
             <strong>Время приготовления:</strong> ${time} минут<br>
-            <strong>Шаги приготовления:</strong> ${instructions}
+            <strong>Шаги приготовления:</strong> ${instructions}<br>
+            <strong>Тип блюда:</strong> ${dishType}
+        </p>    
         `;
         modal.style.display = "block"; // Показать модальное окно
     }

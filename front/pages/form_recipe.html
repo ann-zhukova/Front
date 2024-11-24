@@ -25,16 +25,20 @@
             <h1>Добавьте свой рецепт</h1>
             <form id="recipeForm">
                 <label for="recipeName">Название рецепта:</label>
-                <input type="text" id="recipeName" name="recipeName" required>
+                <input type="text" id="recipeName" name="recipeName" placeholder="Введите название рецепта" required>
                 <span class="error" id="nameError"></span>
 
                 <label for="ingredients">Ингредиенты:</label>
-                <textarea id="ingredients" name="ingredients" rows="4" required></textarea>
+                <textarea id="ingredients" placeholder="Введите ингредиенты через ;" name="ingredients" rows="4" required></textarea>
                 <span class="error" id="ingredientsError"></span>
 
                 <label for="time">Время приготовления (минуты):</label>
-                <input type="number" id="time" name="time" required min="1">
+                <input type="number" id="time" name="time" required  min="1">
                 <span class="error" id="timeError"></span>
+
+                <label for="dishType">Тип блюда (через запятую):</label>
+                <input type="text" id="dishType" name="dishType" placeholder="Введите тип блюда, например, суп, десерт" required>
+                <span class="error" id="dishTypeError"></span>
 
                 <div id="stepsContainer">
                     <label for="instructions">Шаги приготовления:</label>
@@ -45,7 +49,6 @@
                 <button type="button" onclick="addStep()">Добавить шаг</button>
                 <button type="submit">Добавить рецепт</button>
             </form>
-            <!-- Модальное окно -->
             <div id="myModal" class="modal">
                 <div class="modal-content">
                     <span class="close" onclick="closeModal()">&times;</span>
