@@ -19,11 +19,3 @@ input[type="text"], textarea {
     border-radius: 4px;
     box-sizing: border-box;
 }
-
-.step-container {
-    display: flex;
-    align-items: flex-start;
-}
-.add-step {
-    margin-left: 10px;
-}
