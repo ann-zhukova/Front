@@ -40,7 +40,7 @@ section {
 }
 
 table {
-  width: 90%;
+  width: 80%;
   border-collapse: collapse;
   margin: 20px 0;
   padding: 14px;
@@ -55,4 +55,9 @@ th, td {
 
 tr:hover {
   background-color: #24232E;
+}
+
+.arraivel_time{
+  justify-content: center;
+  width: 90%;
 }
