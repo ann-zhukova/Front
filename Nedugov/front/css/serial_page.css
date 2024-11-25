@@ -6,7 +6,7 @@
     align-items: flex-start; /* Прижимает элементы к верхней части контейнера */
 }
 
-h2 {
+h2,h3 {
     font-size: medium
 }
  
@@ -139,9 +139,7 @@ p {
     
   .scrollable-item {
     display: flex;
-    flex: 1 1 auto; /* Элементы не будут сжиматься */
-    width: calc(10%); /* Ширина каждого элемента */
-    margin-right: 16px; /* Отступ между элементами */
+    margin-right: 32px; /* Отступ между элементами */
   }
   
   .film {

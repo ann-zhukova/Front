@@ -10,7 +10,7 @@ main {
     height: auto;
     width: 100%;
     align-items: center;
-    justify-content: center;
+    justify-content: space-around;
 }
 
 .recipe-ingredients{
@@ -18,7 +18,11 @@ main {
     display: block;
     border-radius: 12px;
     background-color: #DBDEDD;
-    font-size: 10px;
+    font-size: medium;
+    width: calc(100% - 16px);
+}
+h1{
+    font-size: 36px;
 }
 
 .recipe-img{
@@ -30,11 +34,12 @@ main {
 .recipe-info{
     padding: 16px;
     display: block;
+    width: calc(50% - 32px);
 }
 .recipe-name{
     padding: 16px;
     display: flex;
-    flex-direction: row;
+    justify-content: space-between;
     align-items: center;
 }
 .recipe-favorite{
@@ -59,5 +64,5 @@ main {
 
 .recipe-step{
     padding: 16px;
-    width: 30%;
+    width: calc(30% - 22px);
 }
