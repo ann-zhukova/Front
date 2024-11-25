@@ -11,6 +11,9 @@ form {
     flex-direction: column;
     max-width: 600px;
 }
+form > *{
+    margin-bottom: 6px;
+}
 input[type="text"], textarea {
     width: 100%;
     padding: 12px;

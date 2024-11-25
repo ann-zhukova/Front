@@ -20,7 +20,7 @@ section {
 .scrollable-item {
   display: flex;
   flex: 0 0 auto; /* Элементы не будут сжиматься */
-  width: calc(30%); /* Ширина каждого элемента */
+  width: calc(15%); /* Ширина каждого элемента */
   margin-right: 16px; /* Отступ между элементами */
 }
 

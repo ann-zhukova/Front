@@ -7,7 +7,9 @@ body {
     min-height: 100vh; /* Минимальная высота 100% от высоты окна */
     margin: 0; /* Убираем отступы */
     font-family: 'Helvetica';
+    font-size: large;
     color: #fff;
+    width: 100%;
 }
 main{
     display: flex;
@@ -81,31 +83,34 @@ body {
     color:#fff;
     margin: 16px 16px 16px 16px;
     padding: 16px;
+    justify-content: space-between;
+    width: 32%;
 }
 .sort > *{
     display: flex;
+    width: auto;
     flex: 0 1; 
 }
 .filtration{
     background-color: #24232E;
     color:#fff;
     margin: 16px 16px 16px 16px;
-    padding: 12px;
+    padding: 20px;
 }
 
 .filtration > * {
     display: block; /* Элементы внутри будут в столбик */
     color: #fff;
-    margin: 6px;
-    width: calc(100% - 12px);
+    margin: 12px 12px 12px 12px;
+    width: calc(100% - 24px);
 }
 .filtrationHeader{
     background-color: #60687F;
     color: #D1C6E9;
-    width: 50%;
-    margin-left: -12px;
-    margin-top:-12px;
-    margin-right: -12px;
+    width: 60%;
+    margin-left: -20px;
+    margin-top:-20px;
+    margin-right: -20px;
 }
 
 .selectInput{
@@ -122,20 +127,26 @@ body {
     padding: 4px;
     border-radius: 8px;
 }
+.slider-head{
+  display: flex;
+  margin-left: 0px;
+  align-items: flex-start;
+  justify-content: space-between;
+}
 .card {
-    margin: 16px;
+    margin: 12px;
     display: flex;
     flex-direction: row;
     flex: 1 1 auto;
-    height: 200px;
+    height: auto;
   }
   
   .card-tags {
-    padding: 6px;
+    margin-left: 6px;
     font-size: medium;
   }
   .card-header{
-    padding: 6px;
+    margin-left: 6px;
     font-size: large;
   }
 
@@ -144,16 +155,15 @@ body {
     font-size: medium;
   }
   
-  .card-body {
+  .card-body{
     padding: 16px;
     display: block;
-    margin-left: 16px;
   }
   
   .card-img {
-    width: 139px;
+    width: 166px;
     height: auto;
-    flex: 0 0 139px;
+    flex: 0 0 166px;
   }
   
   section {
@@ -286,6 +296,7 @@ ul ul {
     width: calc(100%);
     display: inline-block;
     margin-top: -5px;
+    margin-left: -8px;
   }
   
   .rangeslider input {

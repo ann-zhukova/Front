@@ -7,16 +7,18 @@ document.getElementById('serialForm').addEventListener('submit', function(event)
     const description = document.getElementById('decsription').value.trim();
     const rating = document.getElementById('raiting').value;
     const year = document.getElementById('year').value;
+    const averageTime = document.getElementById('averageTime').value;
+    const averageEpisodes = document.getElementById('averageEpisodes').value;
     const checkboxes = document.querySelectorAll('.dropdown-content input[type="checkbox"]');
     
     // Validate fields
     let isValid = true;
     let errorMessage = '';
 
-    // Check if serial name is provided
-    if (!serialName) {
+    const namePattern = /^[a-zA-Zа-яА-Я0-9\s]+$/; // Регулярное выражение для букв и цифр
+    if (!serialName || !namePattern.test(serialName)) {
         isValid = false;
-        errorMessage += 'Название обязательно.\n';
+        errorMessage += 'Название должно содержать только буквы и цифры.\n';
     }
 
     // Check if description is provided
@@ -35,6 +37,18 @@ document.getElementById('serialForm').addEventListener('submit', function(event)
     if (!year || year < 1900 || year > new Date().getFullYear()) {
         isValid = false;
         errorMessage += 'Введите корректный год выхода.\n';
+    }
+
+    // Check if average time is a valid number
+    if (!averageTime || averageTime <= 0) {
+        isValid = false;
+        errorMessage += 'Введите корректное среднее время серии.\n';
+    }
+
+    // Check if average episodes is a valid number
+    if (!averageEpisodes || averageEpisodes <= 0) {
+        isValid = false;
+        errorMessage += 'Введите корректное среднее число серий в сезоне.\n';
     }
 
     // Check if at least one checkbox is selected
