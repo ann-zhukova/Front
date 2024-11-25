@@ -4,7 +4,11 @@
     flex-direction: row;
     flex: 1 1 auto;
     align-items: flex-start; /* Прижимает элементы к верхней части контейнера */
-  }
+}
+
+h2 {
+    font-size: medium
+}
  
 .serial-img{
     width: 30%;
